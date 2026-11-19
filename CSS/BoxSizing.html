@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #div1{ width: 200px;
+        height: 150px;
+        background-color: aqua;
+        border:2px solid rgb(255, 162, 0);
+        padding: 20px;
+        box-sizing: border-box;
+        box-shadow: 10px 10px 10px 5px pink ;
+        left: 150px;
+        position: relative;
+        z-index:4;}
+        /* transition: 5s transform; */
+       #div1{ animation: move 3s infinite alternate;}
+        
+       @keyframes move {
+        form{ transform: translateY(0px);}
+        to{ 
+         transform: translateY(150px);   
+        }}
+        
+        /* #d1:hover{ transform: rotate(40deg)} */
+
+    /* #div2{width: 200px;
+        height: 150px;
+        background-color: rgb(214, 213, 141);
+        border:2px solid rgb(230, 94, 234);
+        padding: 20px;
+        box-sizing: border-box;
+        left:20px;
+        top:10px;
+        position: absolute;
+        z-index:3;} */
+    #parent{
+        position: relative;
+        width: 800px;
+        height: 500px;
+        background-color: rgb(244, 141, 233);
+        border: 3px solid brown ;
+    }
+    
+    
+
+</style>
+
+
+</head>
+<body> 
+    <div id="parent">
+    <div id="div1">
+        This is my html , css , JAVA 
+    </div>
+    <!-- <div id="div2">
+        This is my project....
+    </div> -->
+    </div>
+</body>
+</html>

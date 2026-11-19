@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title >Ambulance Dispatch System</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <img src="/ambulance.jpg" alt="Ambulance pic" width="150" height="110" align="left">
+    <img src="/ambulance1.jpg" alt="ambulance pic" width="150" height="100" align="right">
+    <h1 align="center">Ambulance Dispatch System</h1>
+    <p align="center">Emergency Response and Fleet Management Portal</p>
+    <hr>
+
+    <!-- Navigation Links -->
+    <p align="center">
+        <a href="#request">Emergency Request</a> | 
+        <a href="#availability">Ambulance Availability</a> | 
+        <a href="#dispatch">Dispatch Assignment</a> | 
+        <a href="#status">Trip Status</a> | 
+        <a href="#history">Incident History</a>
+    </p>
+    <hr>
+
+    <!-- 1. Emergency Request Section -->
+    <h2 id="request">1. Emergency Request and Location</h2>
+    <form>
+        <table border="2" cellpadding="10">
+            <tr>
+                <td><label for="pname">Patient Name:</label></td>
+                <td><input type="text" id="pname" name="patient_name" required></td>
+            </tr>
+            <tr>
+                <td><label for="contact">Contact Number:</label></td>
+                <td><input type="tel" id="contact" name="contact_number" required></td>
+            </tr>
+            <tr>
+                <td><label for="location">Pickup Location Address:</label></td>
+                <td><textarea id="location" name="pickup_location" rows="4" cols="30" required></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="priority">Priority Level:</label></td>
+                <td>
+                    <select id="priority" name="priority_level" required>
+                        <option value="">-- Select Priority --</option>
+                        <option value="High">High (Critical / Heart Attack / Accident)</option>
+                        <option value="Medium">Medium (Moderate Injury / Severe Illness)</option>
+                        <option value="Low">Low (Non-Emergency Patient Transfer)</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Submit Emergency Request">
+                    <input type="reset" value="Clear Form">
+                </td>
+            </tr>
+             <img src="/medical-herbal-.avif" alt="pics" width="550" height="300" align="right">
+        </table>
+    </form>
+
+    <hr>
+
+    <!-- 2. Ambulance Availability Section -->
+    <h2 id="availability">2. Ambulance Availability</h2>
+    <table border="2" cellpadding="10" cellspacing="0" width="100%">
+        <thead>
+            <tr bgcolor="#cccccc">
+                <th>Ambulance ID</th>
+                <th>Driver Name</th>
+                <th>Ambulance Type</th>
+                <th>Current Location</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>AMB-101</td>
+                <td>Rajesh Kumar</td>
+                <td>ALS (Advanced Life Support)</td>
+                <td>Central Hospital</td>
+                <td>Available</td>
+            </tr>
+            <tr>
+                <td>AMB-102</td>
+                <td>Suresh Singh</td>
+                <td>BLS (Basic Life Support)</td>
+                <td>Jalandhar</td>
+                <td>Occupied</td>
+            </tr>
+            <tr>
+                <td>AMB-103</td>
+                <td>Amit Verma</td>
+                <td>ALS (Advanced Life Support)</td>
+                <td>Station Road</td>
+                <td>Available</td>
+            </tr>
+            <tr>
+                <td>AMB-104</td>
+                <td>Vikram Patel</td>
+                <td>BLS (Basic Life Support)</td>
+                <td> Near Lpu</td>
+                <td>Maintenance</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <!-- 3. Dispatch Assignment Section -->
+    <h2 id="dispatch">3. Dispatch Assignment</h2>
+    <form>
+        <table border="1" cellpadding="8">
+            <tr>
+                <td><label for="req_id">Select Emergency Request:</label></td>
+                <td>
+                    <select id="req_id" name="request_id" required>
+                        <option value="">-- Select Pending Request --</option>
+                        <option value="REQ-501">REQ-501 | Station Road | Priority: High</option>
+                        <option value="REQ-502">REQ-502 | Near lpu | Priority: Medium</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="amb_id">Assign Ambulance:</label></td>
+                <td>
+                    <select id="amb_id" name="ambulance_id" required>
+                        <option value="">-- Select Available Ambulance --</option>
+                        <option value="AMB-101">AMB-101 (Rajesh Kumar - ALS)</option>
+                        <option value="AMB-103">AMB-103 (Amit Verma - ALS)</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Confirm and Dispatch Ambulance">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <hr>
+
+    <!-- 4. Trip Status Section -->
+    <h2 id="status">4. Active Trip Status</h2>
+    <table border="2" cellpadding="8" cellspacing="0" width="100%">
+        <thead>
+            <tr style="background-color: aqua;">
+                <th>Trip ID</th>
+                <th>Assigned Ambulance</th>
+                <th>Patient Name</th>
+                <th>Destination</th>
+                <th>Priority</th>
+                <th>Current Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>TRIP-801</td>
+                <td>AMB-102</td>
+                <td>Ramu verma</td>
+                <td>Sector 4 Market</td>
+                <td>High</td>
+                <td>En Route to Location</td>
+            </tr>
+            <tr>
+                <td>TRIP-802</td>
+                <td>AMB-105</td>
+                <td>Hardik singh</td>
+                <td>Civil Lines</td>
+                <td>Medium</td>
+                <td>Patient Picked Up</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <!-- 5. Incident History Section -->
+    <h2 id="history">5. Incident History Log</h2>
+    <table border="2" cellpadding="8" cellspacing="0" width="100%">
+        <thead>
+            <tr bgcolor="#cccccc">
+                <th>Incident ID</th>
+                <th>Date & Time</th>
+                <th>Patient Name</th>
+                <th>Location</th>
+                <th>Priority</th>
+                <th>Final Outcome</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>INC-101</td>
+                <td>2026-09-18 10:30 AM</td>
+                <td>Rohan Sharma</td>
+                <td>Main Road Block B</td>
+                <td>High</td>
+                <td>Completed (Hospitalized)</td>
+            </tr>
+            <tr>
+                <td>INC-102</td>
+                <td>2026-09-19 02:15 PM</td>
+                <td>Priya Gupta</td>
+                <td>Green Park Area</td>
+                <td>Low</td>
+                <td>Completed (Resolved On-site)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+    <!-- Footer Section -->
+    <p align="center">&copy; 2026 Ambulance Dispatch System - CSE First Year Project</p>
+
+</body>
+</html>
